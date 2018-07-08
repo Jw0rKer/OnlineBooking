@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="main :: head(_,_)">
+</head>
+<body class="text-center">
+<div class="">
+    <form th:action="@{/login}" method="get">
+        <button class="btn btn-md btn-warning btn-block" type="Submit">صفحه ورود </button>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form autocomplete="off" action="#" th:action="@{/registration}"
+                      th:object="${user}" method="post" class="form-horizontal"
+                      role="form">
+                    <h2>ثبت نام</h2>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <label th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+                                   class="validation-message"></label>
+                            <input type="text" th:field="*{username}" placeholder="Name"
+                                   class="form-control" />
+                        </div>
+                    </div>
+
+                    <!--<div class="form-group">
+                        <div class="col-sm-9">
+                            <label	th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                                      class="validation-message"></label>
+                            <input type="text" th:field="*{lastName}"
+                                   placeholder="Last Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="text" th:field="*{email}" placeholder="Email"
+                                   class="form-control" /> <label
+                                th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                                class="validation-message"></label>
+                        </div>
+                    </div>-->
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="password" th:field="*{password}"
+                                   placeholder="Password" class="form-control" /> <label
+                                th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                                class="validation-message"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <button class="btn btn-lg btn-primary btn-block active" type="submit">ثبت نام </button>
+                        </div>
+                        <div class="col-sm-9">
+                            <a th:href="@{/registration}" href="#" class="btn btn-secondary btn-lg btn-block active" role="button"
+                               aria-pressed="true">ایجاد حساب کاربری</a>
+                        </div>
+
+                    </div>
+
+                    <span th:utext="${successMessage}"></span>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<th:block th:replace="main :: mainScripts(_)"></th:block>
+</html>

@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.core.io.Resource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.IOException;
 
@@ -50,6 +51,11 @@ public class MyApplication extends SpringBootServletInitializer {
     return new DefaultConversionService();
   }
 
+  @Bean
+  public BCryptPasswordEncoder passwordEncoder() {
+    BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+    return bCryptPasswordEncoder;
+  }
 
   public static void main(String[] args) {
     ConfigurableApplicationContext context = SpringApplication.run(MyApplication.class, args);

@@ -24,6 +24,4 @@ spring:
       cache: false
     messages:
       cache-duration: 1s
-server:
-  port: 80
 
