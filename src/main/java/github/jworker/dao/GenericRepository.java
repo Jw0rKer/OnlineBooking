@@ -1,9 +1,8 @@
 /**
  *
  */
-package github.jworker.dao.imp;
+package github.jworker.dao;
 
-import github.jworker.dao.dec.IGenericRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

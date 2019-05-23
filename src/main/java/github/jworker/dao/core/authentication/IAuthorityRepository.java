@@ -1,6 +1,6 @@
-package github.jworker.dao.dec.core.authentication;
+package github.jworker.dao.core.authentication;
 
-import github.jworker.dao.dec.IGenericRepository;
+import github.jworker.dao.IGenericRepository;
 import github.jworker.model.core.authentication.Authority;
 
 public interface IAuthorityRepository extends IGenericRepository {

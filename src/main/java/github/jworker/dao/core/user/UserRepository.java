@@ -1,8 +1,7 @@
-package github.jworker.dao.imp.core.authentication;
+package github.jworker.dao.core.user;
 
-import github.jworker.dao.dec.core.authentication.IUserRepository;
-import github.jworker.dao.imp.GenericRepository;
-import github.jworker.model.core.authentication.User;
+import github.jworker.dao.GenericRepository;
+import github.jworker.model.core.user.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.NoResultException;
@@ -18,7 +17,7 @@ public class UserRepository extends GenericRepository implements IUserRepository
     @Override
     public User findByUserName(String username) {
         Map<String, Object> map = new HashMap<>();
-        String hql = " from  " + objectClass.getName() + " e where e.username like :username  ";
+        String hql = " from  " + objectClass.getName() + " e where e.username = :username  ";
         map.put("username", username);
         Query query = getQuery(hql, map);
         User user ;

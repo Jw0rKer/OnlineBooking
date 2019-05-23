@@ -19,7 +19,7 @@ spring:
             hibernate:
                 dialect: org.hibernate.dialect.MySQL57Dialect
                 format_sql: false
-        show-sql: true
+        show-sql: false
     thymeleaf:
       cache: false
     messages:

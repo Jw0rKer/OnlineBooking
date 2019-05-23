@@ -1,7 +1,6 @@
-package github.jworker.dao.imp.core.authentication;
+package github.jworker.dao.core.authentication;
 
-import github.jworker.dao.dec.core.authentication.IAuthorityRepository;
-import github.jworker.dao.imp.GenericRepository;
+import github.jworker.dao.GenericRepository;
 import github.jworker.model.core.authentication.Authority;
 import org.springframework.stereotype.Repository;
 

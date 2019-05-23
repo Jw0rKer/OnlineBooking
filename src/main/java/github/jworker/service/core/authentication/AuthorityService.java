@@ -1,7 +1,7 @@
-package github.jworker.service.impl.core.authentication;
+package github.jworker.service.core.authentication;
 
 import github.jworker.model.core.authentication.Authority;
-import github.jworker.service.dec.core.authentication.IAuthorityService;
+import github.jworker.service.core.authentication.IAuthorityService;
 import org.springframework.stereotype.Service;
 
 @Service

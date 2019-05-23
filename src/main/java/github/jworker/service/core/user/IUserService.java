@@ -1,10 +1,7 @@
-package github.jworker.service.dec.core.authentication;
+package github.jworker.service.core.user;
 
-import github.jworker.model.core.authentication.User;
+import github.jworker.model.core.user.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
-/**
- * @author shayan mirzaee
- */
 public interface IUserService  extends UserDetailsService {
     void saveUser(User user);
 }

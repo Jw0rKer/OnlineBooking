@@ -1,4 +1,4 @@
-package github.jworker.dao.dec;
+package github.jworker.dao;
 
 import javax.persistence.Query;
 import java.util.Map;
