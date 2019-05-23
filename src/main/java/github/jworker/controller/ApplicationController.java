@@ -29,7 +29,7 @@ public class ApplicationController {
 
     @GetMapping("/")
     public String homePage(Model model) {
-        return "main";
+        return "index";
     }
 
     @RequestMapping("/login")
@@ -37,16 +37,16 @@ public class ApplicationController {
         return "login";
     }
 
-    @GetMapping("/registration")
+    @GetMapping("/register")
     public ModelAndView registration() {
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
         modelAndView.addObject("user", user);
-        modelAndView.setViewName("registration");
+        modelAndView.setViewName("register");
         return modelAndView;
     }
 
-    @PostMapping("/registration")
+    @PostMapping("/singUp")
     public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user.getUsername());
