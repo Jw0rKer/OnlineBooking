@@ -54,12 +54,12 @@ public class ApplicationController {
             User userExists = (User) iUserService.loadUserByUsername(user.getUsername());
             bindingResult.rejectValue("username", "error.username",
                     "There is already a user registered with the email provided");
-            modelAndView.setViewName("registration");
+            modelAndView.setViewName("error");
         } catch (UsernameNotFoundException e) {
             iUserService.saveUser(user);
             modelAndView.addObject("successMessage", "User has been registered successfully");
             modelAndView.addObject("user", new User());
-            modelAndView.setViewName("registration");
+            modelAndView.setViewName("index");
         }
         return modelAndView;
     }
